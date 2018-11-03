@@ -18,7 +18,7 @@
 			<dock index="0" id="6" port="n" />
 			<dock index="1" id="1" port="s" />
 		</line>
-		<room id="8" name="foyerLanding" x="-352" y="-1440" w="192" h="96" description="" />
+		<room id="8" name="foyerLanding" x="-352" y="-1312" w="192" h="96" description="" />
 		<room id="10" name="grandHall" x="160" y="192" w="256" h="160" description="" />
 		<line id="11" startText="w" endText="e">
 			<dock index="0" id="10" port="w" />
@@ -31,7 +31,7 @@
 		</line>
 		<line id="13" startText="down" endText="foyerStairs">
 			<dock index="0" id="8" port="sw" />
-			<point index="1" x="-416" y="-1312" />
+			<point index="1" x="-416" y="-1184" />
 		</line>
 		<line id="14" startText="e" midText="libraryDoor1" endText="w">
 			<dock index="0" id="2" port="e" />
@@ -80,7 +80,6 @@
 			<dock index="1" id="12" port="nnw" />
 		</line>
 		<room id="30" name="gallery" x="672" y="-544" w="192" h="160" description="" />
-		<room id="31" name="Cave" x="960" y="-2208" w="160" h="96" description="" />
 		<room id="32" name="Cave" x="-1280" y="2400" w="160" h="96" description="" />
 		<room id="33" name="firstFloorWesternHallway" x="-608" y="96" w="352" h="128" description="" />
 		<line id="34" startText="sw" endText="ne">
@@ -171,29 +170,29 @@
 			<dock index="0" id="61" port="n" />
 			<dock index="1" id="63" port="s" />
 		</line>
-		<room id="65" name="musicRoom" x="-352" y="-1920" w="192" h="96" description="This room is quite large, standing roughly 20 feet tall. There's a grand piano in here, sectioned off in a carpeted area. Half the floor is marble. The fireplace in the middle of the room seems to radiate heat despite not being lit" />
-		<room id="67" name="toyRoom" x="-608" y="-2080" w="192" h="96" description="" />
-		<room id="68" name="billiardRoom" x="-864" y="-1920" w="192" h="96" description="" />
-		<room id="69" name="gentlemensRoom" x="-864" y="-1600" w="192" h="96" description="" />
-		<room id="70" name="ballroom" x="-608" y="-1920" w="192" h="96" description="" />
+		<room id="65" name="musicRoom" x="416" y="-2080" w="192" h="96" description="This room is quite large, standing roughly 20 feet tall. There's a grand piano in here, sectioned off in a carpeted area. Half the floor is marble. The fireplace in the middle of the room seems to radiate heat despite not being lit" />
+		<room id="67" name="toyRoom" x="-608" y="-2240" w="192" h="96" description="" />
+		<room id="68" name="billiardRoom" x="-608" y="-1856" w="192" h="96" description="" />
+		<room id="69" name="gentlemensRoom" x="-1280" y="-1600" w="192" h="96" description="" />
+		<room id="70" name="ballroom" x="-96" y="-1920" w="448" h="96" description="" />
 		<room id="66" name="drawingRoom" x="-352" y="-2240" w="192" h="96" description="" />
 		<room id="71" name="gymnasium" x="160" y="-1600" w="192" h="96" description="" />
-		<room id="72" name="movieTheater" x="-1120" y="-2080" w="192" h="96" description="" />
-		<room id="73" name="theaterFront" x="-96" y="-2080" w="192" h="96" description="" />
+		<room id="72" name="movieTheater" x="416" y="-1920" w="192" h="96" description="" />
+		<room id="73" name="theaterHall" x="160" y="-2240" w="192" h="96" description="" />
 		<room id="74" name="danceStudio" x="-96" y="-1440" w="192" h="96" description="" />
 		<room id="75" name="indoorPool" x="416" y="-1600" w="192" h="96" description="" />
 		<room id="76" name="sauna" x="672" y="-1440" w="192" h="96" description="" />
 		<room id="77" name="cardioRoom" x="160" y="-1760" w="192" h="96" description="" />
 		<room id="78" name="fencingRoom" x="160" y="-1440" w="192" h="96" description="" />
 		<room id="79" name="spa" x="416" y="-1440" w="192" h="96" description="" />
-		<room id="80" name="readingRoom" x="-96" y="-1920" w="192" h="96" description="" />
-		<room id="81" name="pianoRoom" x="-352" y="-2080" w="192" h="96" description="" />
-		<room id="82" name="diningHall" x="-608" y="-1440" w="192" h="96" description="" />
-		<room id="83" name="auctionHall" x="-608" y="-1760" w="192" h="96" description="" />
-		<room id="84" name="arcade" x="-96" y="-1760" w="192" h="96" description="" />
+		<room id="80" name="readingRoom" x="-96" y="-2240" w="192" h="96" description="" />
+		<room id="81" name="pianoRoom" x="416" y="-2240" w="192" h="96" description="" />
+		<room id="82" name="conferenceRoom" x="-896" y="-1440" w="192" h="96" description="" />
+		<room id="83" name="auctionHall" x="-896" y="-1760" w="192" h="96" description="" />
+		<room id="84" name="arcade" x="-608" y="-2048" w="192" h="96" description="" />
 		<line id="85" startText="n" midText="stageDoor" endText="to backStage">
 			<dock index="0" id="73" port="n" />
-			<point index="1" x="0" y="-2176" />
+			<point index="1" x="256" y="-2336" />
 		</line>
 		<line id="86" startText="n" endText="s">
 			<dock index="0" id="71" port="n" />
@@ -224,16 +223,12 @@
 			<dock index="0" id="79" port="e" />
 			<dock index="1" id="76" port="w" />
 		</line>
-		<room id="94" name="lobby" x="-352" y="-1600" w="192" h="96" description="" />
+		<room id="94" name="receptionHall" x="-352" y="-1696" w="192" h="192" description="" />
 		<line id="96" startText="in" endText="s">
 			<dock index="0" id="8" port="n" />
 			<dock index="1" id="94" port="s" />
 		</line>
-		<line id="95" startText="n" endText="s">
-			<dock index="0" id="94" port="n" />
-			<dock index="1" id="65" port="s" />
-		</line>
-		<room id="97" name="upstairsHallway" x="-608" y="-1600" w="192" h="96" description="" />
+		<room id="97" name="westUpstairsHallway" x="-1024" y="-1600" w="448" h="96" description="" />
 		<line id="98" startText="e" endText="w">
 			<dock index="0" id="69" port="e" />
 			<dock index="1" id="97" port="w" />
@@ -253,6 +248,80 @@
 		<line id="102" startText="e" endText="w">
 			<dock index="0" id="94" port="e" />
 			<dock index="1" id="87" port="w" />
+		</line>
+		<room id="95" name="northUpstairsHallway" x="-352" y="-2080" w="192" h="256" description="" />
+		<line id="103" startText="n" endText="s">
+			<dock index="0" id="94" port="n" />
+			<dock index="1" id="95" port="s" />
+		</line>
+		<line id="104" startText="sw" endText="ne">
+			<dock index="0" id="95" port="wsw" />
+			<dock index="1" id="68" port="e" />
+		</line>
+		<line id="105" startText="ne" endText="s">
+			<dock index="0" id="94" port="ne" />
+			<dock index="1" id="70" port="sw" />
+		</line>
+		<line id="106" startText="se" endText="w">
+			<dock index="0" id="95" port="ese" />
+			<dock index="1" id="70" port="w" />
+		</line>
+		<room id="107" name="performanceLobby" x="-96" y="-2080" w="448" h="96" description="" />
+		<line id="108" startText="n" endText="sw">
+			<dock index="0" id="70" port="n" />
+			<dock index="1" id="107" port="ssw" />
+		</line>
+		<line id="109" startText="w" endText="e">
+			<dock index="0" id="107" port="w" />
+			<dock index="1" id="95" port="ene" />
+		</line>
+		<line id="110" startText="se" endText="n">
+			<dock index="0" id="107" port="se" />
+			<dock index="1" id="72" port="nw" />
+		</line>
+		<line id="111" endText="to projectorRoom">
+			<dock index="0" id="72" port="e" />
+			<point index="1" x="704" y="-1888" />
+		</line>
+		<line id="112" startText="e" endText="w">
+			<dock index="0" id="107" port="e" />
+			<dock index="1" id="65" port="w" />
+		</line>
+		<line id="113" startText="ne" endText="sw">
+			<dock index="0" id="107" port="ne" />
+			<dock index="1" id="81" port="sw" />
+		</line>
+		<line id="114" startText="s" endText="n">
+			<dock index="0" id="81" port="s" />
+			<dock index="1" id="65" port="n" />
+		</line>
+		<line id="31" startText="w" endText="e">
+			<dock index="0" id="95" port="wnw" />
+			<dock index="1" id="84" port="e" />
+		</line>
+		<line id="115" startText="n" endText="s">
+			<dock index="0" id="107" port="nne" />
+			<dock index="1" id="73" port="s" />
+		</line>
+		<line id="117" startText="e" endText="w">
+			<dock index="0" id="66" port="e" />
+			<dock index="1" id="80" port="w" />
+		</line>
+		<line id="116" startText="nw" endText="se">
+			<dock index="0" id="95" port="nw" />
+			<dock index="1" id="67" port="se" />
+		</line>
+		<line id="118" startText="s" endText="n">
+			<dock index="0" id="67" port="s" />
+			<dock index="1" id="84" port="n" />
+		</line>
+		<line id="119" startText="s" endText="n">
+			<dock index="0" id="66" port="s" />
+			<dock index="1" id="95" port="n" />
+		</line>
+		<line id="120" startText="ne" endText="s">
+			<dock index="0" id="95" port="ne" />
+			<dock index="1" id="80" port="sw" />
 		</line>
 	</map>
 	<settings>

@@ -1,0 +1,353 @@
+#charset "us-ascii"
+
+#include <adv3.h>
+#include <en_us.h>
+
+versionInfo : GameID
+    name = 'Nameless'
+    byline = 'By A Trizbort User'
+    version = '1'
+    desc = ''
+;
+
+foyer: Room 'foyer'
+    "You stand in a room, lonely as dusk in the tundra. 
+    <<describeOrb>> 
+The walls of this place give off the air of a long dead abode. To the <<aHref('go east', 'east', 'GO EAST')>> is what appears to be a rustic looking living room.  There's a <<describeBasementDoor>> to the <<aHref('go west', 'west', 'GO WEST')>>. To the <<aHref('go north', 'north', 'GO NORTH')>> is a hallway that seems to stretch on forever.  Stairs lead <<aHref('go up', 'up', 'GO UP')>> to the second landing<<describeLanding>>.  To the <<aHref('go south', 'south', 'GO SOUTH')>> is what appears to be the front door."
+
+    north = firstFloorNorthernHallway
+    south = frontDrive
+    east = grandHall
+    northwest = firstFloorWesternHallway
+;
+
+firstFloorNorthernHallway: Room 'firstFloorNorthernHallway'
+    "This dingy, dimly-lit corridor runs north and south.  There's a door labelled <<aHref('go to library', '\"Library\"', 'GO TO LIBRARY')>> to the east and a door labelled <<aHref('go to study', '\"study\"', 'GO TO STUDY')>> to the west. \""
+
+    north = kitchen
+    south = foyer
+    east = Library
+    west = canningRoom
+;
+
+kitchen: Room 'kitchen'
+    "\"This is a surprisingly cramped kitchen, equipped with antique accoutrements: the <<aHref('examine stove', 'stove', 'EXAMINE STOVE')>> is a huge black iron contraption, and in place of a refrigerator is an actual icebox.  A hallway lies to the south. \""
+
+    south = firstFloorNorthernHallway
+    east = diningRoom
+    west = Pantry
+;
+
+frontDrive: Room 'frontDrive'
+
+    north = foyer
+;
+
+foyerLanding: Room 'foyerLanding'
+
+    north = receptionHall
+    in = receptionHall
+;
+
+grandHall: Room 'grandHall'
+
+    north = Library
+    east = sittingRoom
+    west = foyer
+;
+
+Library: Room 'Library'
+
+    north = diningRoom
+    south = SecretPanicRoom
+    west = firstFloorNorthernHallway
+;
+
+canningRoom: Room 'canningRoom'
+
+    north = Pantry
+    east = firstFloorNorthernHallway
+;
+
+basementEntrance: Room 'basementEntrance'
+;
+
+Pantry: Room 'Pantry'
+
+    south = canningRoom
+    east = kitchen
+    west = SecretWineCellar
+;
+
+SecretWineCellar: Room '/*(Secret?)*/ Wine Cellar'
+
+    east = Pantry
+;
+
+SecretPanicRoom: Room 'Secret Panic Room'
+
+    north = Library
+;
+
+diningRoom: Room 'diningRoom'
+
+    north = mudRoom
+    south = Library
+    east = gallery
+    west = kitchen
+;
+
+gallery: Room 'gallery'
+
+    north = mudRoom
+    south = diningRoom2
+    west = diningRoom
+;
+
+Cave: Room 'Cave'
+;
+
+firstFloorWesternHallway: Room 'firstFloorWesternHallway'
+
+    south = garage
+    east = foyer
+    west = barrenRoom
+;
+
+barrenRoom: Room 'barrenRoom'
+
+    north = plantationShed
+    south = garage
+    east = firstFloorWesternHallway
+    west = factoryFloor
+    southwest = mineEntrance
+;
+
+plantationShed: Room 'plantationShed'
+
+    south = barrenRoom
+;
+
+modernOffice: Room 'modernOffice'
+
+    south = barrenRoom
+;
+
+factoryFloor: Room 'factoryFloor'
+
+    east = barrenRoom
+;
+
+mineEntrance: Room 'mineEntrance'
+
+    east = barrenRoom
+;
+
+garage: Room 'garage'
+
+    north = firstFloorWesternHallway
+;
+
+coatRoom: Room 'coatRoom'
+
+    east = foyer
+;
+
+diningRoom2: Room 'diningRoom'
+
+    north = gallery
+    south = sittingRoom
+;
+
+sittingRoom: Room 'sittingRoom'
+
+    north = diningRoom2
+    west = grandHall
+;
+
+mudRoom: Room 'mudRoom'
+
+    north = largeGarden
+    south = diningRoom
+;
+
+largeGarden: Room 'largeGarden'
+    "(Replace message because second person)
+This garden seems ridiculously big, but either way, it's open. You can go north to the large greenhouse, go south into the mudroom, or make your escape. But which way? Running to the east or the west would lead to safety, away from this place. That sure sounds nice.
+(East and west should bring "
+
+    north = greenhouse
+    south = mudRoom
+;
+
+greenhouse: Room 'greenhouse'
+
+    south = largeGarden
+;
+
+musicRoom: Room 'musicRoom'
+    "This room is quite large, standing roughly 20 feet tall. There's a grand piano in here, sectioned off in a carpeted area. Half the floor is marble. The fireplace in the middle of the room seems to radiate heat despite not being lit"
+
+    north = pianoRoom
+    west = performanceLobby
+;
+
+toyRoom: Room 'toyRoom'
+
+    south = arcade
+    southeast = northUpstairsHallway
+;
+
+billiardRoom: Room 'billiardRoom'
+
+    east = northUpstairsHallway
+;
+
+gentlemensRoom: Room 'gentlemensRoom'
+
+    east = westUpstairsHallway
+;
+
+ballroom: Room 'ballroom'
+
+    north = performanceLobby
+    west = northUpstairsHallway
+    southwest = receptionHall
+;
+
+drawingRoom: Room 'drawingRoom'
+
+    south = northUpstairsHallway
+    east = readingRoom
+;
+
+gymnasium: Room 'gymnasium'
+
+    north = cardioRoom
+    south = fencingRoom
+    east = indoorPool
+    west = lockerRoom
+;
+
+movieTheater: Room 'movieTheater'
+
+    northwest = performanceLobby
+;
+
+theaterHall: Room 'theaterHall'
+
+    south = performanceLobby
+;
+
+danceStudio: Room 'danceStudio'
+
+    north = lockerRoom
+;
+
+indoorPool: Room 'indoorPool'
+
+    south = spa
+    west = gymnasium
+;
+
+sauna: Room 'sauna'
+
+    west = spa
+;
+
+cardioRoom: Room 'cardioRoom'
+
+    south = gymnasium
+;
+
+fencingRoom: Room 'fencingRoom'
+
+    north = gymnasium
+;
+
+spa: Room 'spa'
+
+    north = indoorPool
+    east = sauna
+;
+
+readingRoom: Room 'readingRoom'
+
+    west = drawingRoom
+    southwest = northUpstairsHallway
+;
+
+pianoRoom: Room 'pianoRoom'
+
+    south = musicRoom
+    southwest = performanceLobby
+;
+
+conferenceRoom: Room 'conferenceRoom'
+
+    north = westUpstairsHallway
+;
+
+auctionHall: Room 'auctionHall'
+
+    south = westUpstairsHallway
+;
+
+arcade: Room 'arcade'
+
+    north = toyRoom
+    east = northUpstairsHallway
+;
+
+lockerRoom: Room 'lockerRoom'
+
+    south = danceStudio
+    east = gymnasium
+    west = receptionHall
+;
+
+receptionHall: Room 'receptionHall'
+
+    north = northUpstairsHallway
+    south = foyerLanding
+    east = lockerRoom
+    west = westUpstairsHallway
+    northeast = ballroom
+;
+
+westUpstairsHallway: Room 'westUpstairsHallway'
+
+    north = auctionHall
+    south = conferenceRoom
+    east = receptionHall
+    west = gentlemensRoom
+;
+
+northUpstairsHallway: Room 'northUpstairsHallway'
+
+    north = drawingRoom
+    south = receptionHall
+    east = ballroom
+    west = billiardRoom
+    northeast = readingRoom
+    northwest = toyRoom
+;
+
+performanceLobby: Room 'performanceLobby'
+
+    north = theaterHall
+    south = ballroom
+    east = musicRoom
+    west = northUpstairsHallway
+    northeast = pianoRoom
+    southeast = movieTheater
+;
+
+me: Actor
+    location = foyer
+;
+
+gameMain: GameMainDef
+    initialPlayerChar = me
+;
+
